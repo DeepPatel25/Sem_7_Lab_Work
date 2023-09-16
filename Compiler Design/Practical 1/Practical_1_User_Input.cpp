@@ -67,12 +67,6 @@ int main()
 
         transitions[temp1] = temp2;
     }
-
-    vector<string> userInput = {"aaab", "aaaab", "aa", "b"};
-    for (int i = 0; i < userInput.size(); i++)
-    {
-        checkDFA(userInput[i], startState, acceptState, transitions);
-    }
-
+    
     return 0;
 }

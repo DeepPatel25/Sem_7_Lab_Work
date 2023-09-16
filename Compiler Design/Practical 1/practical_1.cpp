@@ -1,29 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void checkDFA(string inputString, string currState, set<string> &acceptState, map<string, int> &transitions)
+{
+    for (int i = 0; i < inputString.length(); i++)
+    {
+        string temp = currState + inputString[i];
+        currState = to_string(transitions[temp]);
+    }
+
+    if (acceptState.find(currState) != acceptState.end())
+    {
+        cout << inputString << " is valid" << endl;
+    }
+    else
+    {
+        cout << inputString << " is Invalid" << endl;
+    }
+}
+
 int main()
 {
     vector<string> state = {"0", "1", "2"};
     vector<string> alphabet = {"a", "b", "c"};
     string startState = "0";
     set<string> acceptState = {"2"};
-    map<string, int> mp = {{"0a", 1}, {"0b", 0}, {"0c", 0}, {"1a", 2}, {"1b", 1}, {"1c", 1}, {"2a", 1}, {"2b", 2}, {"2c", 2}};
+    map<string, int> transitions = {{"0a", 1}, {"0b", 0}, {"0c", 0}, {"1a", 2}, {"1b", 1}, {"1c", 1}, {"2a", 1}, {"2b", 2}, {"2c", 2}};
 
-    string inputString = "aaab";
-
-    for (int i = 0; i < inputString.length(); i++)
+    vector<string> userInput = {"aaab", "aaaab", "aa", "b"};
+    for (int i = 0; i < userInput.size(); i++)
     {
-        string temp = startState + inputString[i];
-        startState = to_string(mp[temp]);
-    }
-
-    if (acceptState.find(startState) != acceptState.end())
-    {
-        cout << inputString << " is valid";
-    }
-    else
-    {
-        cout << inputString << " is Invalid";
+        checkDFA(userInput[i], startState, acceptState, transitions);
     }
 
     return 0;
