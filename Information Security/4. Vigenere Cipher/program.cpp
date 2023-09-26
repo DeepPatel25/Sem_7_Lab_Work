@@ -57,7 +57,7 @@ string decrypt(string ciphertext, string keyword)
 
 int main()
 {
-    string plaintext = "HELLOMYNAMEISDEEP";
+    string plaintext = "Hello my name is Deep";
     string keyword = "KEY";
 
     string ciphertext = encrypt(plaintext, keyword);

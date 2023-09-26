@@ -115,10 +115,6 @@ string playfairDecrypt(const string &message, const vector<vector<char>> &matrix
     string decryptedMessage = "";
     string processedMessage = message;
 
-    // Remove spaces and convert to uppercase
-    processedMessage.erase(remove_if(processedMessage.begin(), processedMessage.end(), ::isspace), processedMessage.end());
-    transform(processedMessage.begin(), processedMessage.end(), processedMessage.begin(), ::toupper);
-
     for (int i = 0; i < processedMessage.length(); i += 2)
     {
         char first = processedMessage[i];

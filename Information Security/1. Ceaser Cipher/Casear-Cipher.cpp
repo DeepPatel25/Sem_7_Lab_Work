@@ -25,7 +25,7 @@ string DecryptedString(string inputString, int key)
 
 int main()
 {
-    string inputString = "Deep Patel";
+    string inputString = "alphabet";
     int key = 5;
 
     string encryptedString = EncryptedString(inputString, key);

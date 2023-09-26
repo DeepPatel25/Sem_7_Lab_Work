@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to encrypt a message using the Rail Fence cipher
@@ -115,7 +112,7 @@ string railFenceDecrypt(string ciphertext, int rails)
 
 int main()
 {
-    string plaintext = "HELLOMYNAMEISDEEP";
+    string plaintext = "Hello what are you doing?";
     int rails = 3;
 
     string ciphertext = railFenceEncrypt(plaintext, rails);
