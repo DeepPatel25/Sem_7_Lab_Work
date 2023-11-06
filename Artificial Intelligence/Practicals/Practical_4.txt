@@ -1,0 +1,31 @@
+   [cat]         [mat]         [bird]       [cream]
+    |            |            |            |
+  (tom)       (mat1)       (bird1)    (likes: cream)
+    |            |
+  [likes]      [sat_on]
+    |            |
+  (Cat)       (cat1)
+    |           
+  [is_a]
+    |
+  (Mammal)
+    |
+  [has]
+    |
+  (fur)
+    |
+  [is_a]
+   / \
+(Bird) (Animal)
+             |
+          [is_a]
+           /   \
+       (mammal) (bird)
+             |
+          [owns]
+           /
+       (john)
+             |
+          [is_coloured]
+             |
+           (ginger)
